@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>pig game</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <button class="instruction">ℹ️</button>
+
+    <div class="instruction-modal hidden">
+      <header class="header">
+        <h1>How to play:</h1>
+        <button class="close-modal">x</button>
+      </header>
+      <ol>
+        <li>
+          Start rolling the dice by clicking the 🎲 ROLL DICE button. your
+          scores will be added on the current score box
+        </li>
+        <li>
+          Now if you encounter a 1 rolled by the dice then your current score
+          becomes 0 and the dice will be passed to the next player
+        </li>
+        <li>
+          If you press the 📥 HOLD button when there is some score (not 0) then
+          that score will be added to your total score and the dice will be
+          passed to the other player
+        </li>
+        <li>
+          The player which gets 100 or more in total score first wins the game
+        </li>
+        <li>To restart the game Just press 🔄️ NEW GAME button</li>
+      </ol>
+    </div>
+    <div class="overlay hidden"></div>
+    <main class="main">
+      <section class="player player--0 player--active">
+        <h1 class="name" id="name--0">PLAYER 1</h1>
+        <p class="total-score" id="total-score--0">0</p>
+        <p class="score-board">
+          Current <br /><span class="current-score current-score--0">0</span>
+        </p>
+      </section>
+      <section class="player player--1">
+        <h1 class="name" id="name--1">PLAYER 2</h1>
+        <p class="total-score" id="total-score--1">0</p>
+        <p class="score-board">
+          Current <br /><span class="current-score current-score--1">0</span>
+        </p>
+      </section>
+      <div class="buttons">
+        <button class="btn btn-reset">🔄️ New Game</button>
+        <div class="dice-img"></div>
+        <!-- 			<img class="dice-img" src='./dice-roll.gif' /> -->
+        <button class="btn btn-roll">🎲 roll dice</button>
+        <button class="btn btn-hold">📥 Hold</button>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
